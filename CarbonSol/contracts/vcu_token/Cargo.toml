@@ -1,0 +1,25 @@
+[package]
+name = "vcu_token"
+version = "0.1.0"
+edition = "2021"
+description = "Verified Carbon Unit (VCU) Token - Carbon credit token for the CarbonSol platform"
+authors = ["CarbonSol Team <dev@carbonsol.io>"]
+license = "MIT"
+
+[features]
+no-entrypoint = []
+
+[dependencies]
+solana-program = "1.14.12"
+borsh = "0.9.3"
+thiserror = "1.0.38"
+spl-token = { version = "3.5.0", features = ["no-entrypoint"] }
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[profile.release]
+overflow-checks = true
+lto = "fat"
+codegen-units = 1
+opt-level = 3 

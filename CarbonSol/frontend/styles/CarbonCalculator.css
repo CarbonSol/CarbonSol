@@ -1,0 +1,325 @@
+/* Carbon Footprint Calculator Styles */
+
+.carbon-calculator {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-8);
+}
+
+.calculator-header {
+  text-align: center;
+  margin-bottom: var(--spacing-8);
+}
+
+.calculator-header h2 {
+  font-size: var(--font-size-3xl);
+  color: var(--gray-900);
+  margin-bottom: var(--spacing-3);
+}
+
+.calculator-header p {
+  color: var(--gray-600);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Progress Bar */
+.calculator-progress {
+  margin-bottom: var(--spacing-8);
+}
+
+.progress-steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-2);
+}
+
+.progress-step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--border-radius-full);
+  background-color: var(--gray-200);
+  color: var(--gray-600);
+  font-weight: 600;
+  position: relative;
+}
+
+.progress-step.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.progress-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  width: calc(100% - 40px);
+  height: 2px;
+  background-color: var(--gray-200);
+  transform: translateY(-50%);
+}
+
+.progress-step.active:not(:last-child)::after {
+  background-color: var(--primary-color);
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 var(--spacing-2);
+}
+
+.progress-label {
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+  text-align: center;
+  width: 25%;
+}
+
+/* Form Styles */
+.calculator-form {
+  margin-bottom: var(--spacing-6);
+}
+
+.calculator-step {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.calculator-step h3 {
+  font-size: var(--font-size-2xl);
+  color: var(--gray-900);
+  margin-bottom: var(--spacing-4);
+}
+
+.step-description {
+  color: var(--gray-600);
+  margin-bottom: var(--spacing-6);
+}
+
+.form-group {
+  margin-bottom: var(--spacing-4);
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: var(--spacing-2);
+  color: var(--gray-700);
+}
+
+.form-group input {
+  width: 100%;
+  padding: var(--spacing-3);
+  border: 1px solid var(--gray-300);
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-md);
+  transition: border-color var(--transition-fast) ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(62, 207, 142, 0.2);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--spacing-6);
+}
+
+/* Results Styles */
+.results-step {
+  text-align: center;
+}
+
+.results-total {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: var(--spacing-6) 0;
+  padding: var(--spacing-6);
+  background-color: var(--gray-100);
+  border-radius: var(--border-radius-lg);
+}
+
+.results-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: var(--border-radius-full);
+  font-size: var(--font-size-3xl);
+  margin-right: var(--spacing-6);
+}
+
+.results-content {
+  text-align: left;
+}
+
+.results-content h4 {
+  font-size: var(--font-size-xl);
+  color: var(--gray-900);
+  margin-bottom: var(--spacing-2);
+}
+
+.total-emissions {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-2);
+}
+
+.results-note {
+  color: var(--gray-600);
+  font-size: var(--font-size-sm);
+}
+
+.results-breakdown {
+  margin: var(--spacing-8) 0;
+}
+
+.results-breakdown h4 {
+  font-size: var(--font-size-xl);
+  color: var(--gray-900);
+  margin-bottom: var(--spacing-4);
+}
+
+.breakdown-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-4);
+}
+
+.breakdown-label {
+  width: 150px;
+  font-weight: 500;
+  color: var(--gray-700);
+  display: flex;
+  align-items: center;
+}
+
+.breakdown-label svg {
+  margin-right: var(--spacing-2);
+}
+
+.breakdown-bar {
+  flex: 1;
+  height: 12px;
+  background-color: var(--gray-200);
+  border-radius: var(--border-radius-full);
+  margin: 0 var(--spacing-4);
+  overflow: hidden;
+}
+
+.breakdown-fill {
+  height: 100%;
+  border-radius: var(--border-radius-full);
+}
+
+.breakdown-fill.transportation {
+  background-color: var(--info-color);
+}
+
+.breakdown-fill.energy {
+  background-color: var(--warning-color);
+}
+
+.breakdown-fill.food {
+  background-color: var(--success-color);
+}
+
+.breakdown-fill.lifestyle {
+  background-color: var(--secondary-color);
+}
+
+.breakdown-value {
+  width: 150px;
+  text-align: right;
+  font-weight: 600;
+  color: var(--gray-900);
+}
+
+.breakdown-percentage {
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+  margin-left: var(--spacing-1);
+}
+
+.results-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-4);
+  margin-top: var(--spacing-8);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .carbon-calculator {
+    padding: var(--spacing-4);
+  }
+  
+  .results-total {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .results-icon {
+    margin-right: 0;
+    margin-bottom: var(--spacing-4);
+  }
+  
+  .results-content {
+    text-align: center;
+  }
+  
+  .breakdown-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .breakdown-label {
+    width: 100%;
+    margin-bottom: var(--spacing-2);
+  }
+  
+  .breakdown-bar {
+    width: 100%;
+    margin: var(--spacing-2) 0;
+  }
+  
+  .breakdown-value {
+    width: 100%;
+    text-align: left;
+  }
+  
+  .results-actions {
+    flex-direction: column;
+  }
+  
+  .results-actions button {
+    width: 100%;
+  }
+} 

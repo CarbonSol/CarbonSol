@@ -1,0 +1,127 @@
+name: CarbonSol CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-ai-models:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f CarbonSol/ai-models/requirements.txt ]; then pip install -r CarbonSol/ai-models/requirements.txt; fi
+        pip install pytest pytest-cov
+    
+    - name: Run tests
+      run: |
+        cd CarbonSol/ai-models
+        python -m pytest tests/ --cov=. --cov-report=xml
+    
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v1
+      with:
+        file: ./CarbonSol/ai-models/coverage.xml
+        flags: ai-models
+        fail_ci_if_error: false
+
+  test-contracts:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+    
+    - name: Set up Rust
+      uses: actions-rs/toolchain@v1
+      with:
+        profile: minimal
+        toolchain: stable
+        override: true
+    
+    - name: Set up Solana
+      run: |
+        sh -c "$(curl -sSfL https://release.solana.com/v1.10.0/install)"
+        export PATH="/home/runner/.local/share/solana/install/active_release/bin:$PATH"
+        solana --version
+    
+    - name: Build and test contracts
+      run: |
+        cd contracts
+        cargo build
+        cargo test
+
+  test-frontend:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+    
+    - name: Install dependencies
+      run: |
+        cd frontend
+        npm install
+    
+    - name: Run tests
+      run: |
+        cd frontend
+        npm test
+
+  lint:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install flake8 black
+    
+    - name: Lint with flake8
+      run: |
+        flake8 CarbonSol/ --count --select=E9,F63,F7,F82 --show-source --statistics
+    
+    - name: Check formatting with black
+      run: |
+        black --check CarbonSol/
+    
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+    
+    - name: Install dependencies
+      run: |
+        cd frontend
+        npm install
+    
+    - name: Lint frontend
+      run: |
+        cd frontend
+        npm run lint 
