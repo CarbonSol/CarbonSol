@@ -46,7 +46,6 @@ All core features have been implemented and are functional. The platform is read
 
 - **Website**: [https://carbonsol.io/](https://carbonsol.io/)
 - **GitHub**: [https://github.com/CarbonSol/CarbonSol](https://github.com/CarbonSol/CarbonSol)
-- **Documentation**: [https://docs.carbonsol.io/](https://docs.carbonsol.io/)
 
 ## Core Components
 
@@ -285,10 +284,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For any inquiries, please visit our [official website](https://carbonsol.io/) or reach out through our [GitHub repository](https://github.com/CarbonSol/CarbonSol).
 
-Join our community:
-- [Discord](https://discord.gg/carbonsol)
-- **[Twitter](https://twitter.com/CarbonSolDEX)** - For any issues or bugs, please contact us via direct message on Twitter
-- [Telegram](https://t.me/CarbonSolOfficial)
+**[Twitter](https://twitter.com/CarbonSolDEX)** - For any issues or bugs, please contact us via direct message on Twitter
 
 ### Bug Reports and Support
 
