@@ -35,6 +35,13 @@ CarbonSol AI DEX leverages Solana's high-performance and low-cost features, comb
 
 All core features have been implemented and are functional. The platform is ready for initial testing and feedback. We are actively working on enhancements and additional features for the next release.
 
+**Development Progress**: 
+- All MVP features have been implemented
+- Currently in internal testing phase, some bugs and performance issues may exist
+- Our team is working diligently to improve the project, optimize user experience, and enhance system stability
+- If you encounter any issues, please contact us via direct message on our official Twitter account [@CarbonSolDEX](https://twitter.com/CarbonSolDEX)
+- We will regularly release updates to fix known issues and add new features
+
 ## Official Links
 
 - **Website**: [https://carbonsol.io/](https://carbonsol.io/)
@@ -280,5 +287,18 @@ For any inquiries, please visit our [official website](https://carbonsol.io/) or
 
 Join our community:
 - [Discord](https://discord.gg/carbonsol)
-- [Twitter](https://twitter.com/CarbonSolDEX)
-- [Telegram](https://t.me/CarbonSolOfficial) 
+- **[Twitter](https://twitter.com/CarbonSolDEX)** - For any issues or bugs, please contact us via direct message on Twitter
+- [Telegram](https://t.me/CarbonSolOfficial)
+
+### Bug Reports and Support
+
+During the testing phase, if you encounter any issues or discover bugs, please follow these steps:
+
+1. Contact us via direct message on Twitter [@CarbonSolDEX](https://twitter.com/CarbonSolDEX)
+2. Provide a detailed description of the issue, including:
+   - Steps to reproduce the problem
+   - Your environment (browser, operating system, etc.)
+   - Screenshots or error messages (if available)
+3. Our team will respond as soon as possible to address your concerns
+
+We highly value user feedback, and your suggestions will help us build a better product! 
