@@ -104,13 +104,23 @@ All core features have been implemented and are functional. The platform is read
 ## Screenshots
 
 <div align="center">
-  <img src="assets/screenshots/dashboard.png" alt="Dashboard" width="45%">
-  <img src="assets/screenshots/trade.png" alt="Trading Interface" width="45%">
+  <h3>Dashboard</h3>
+  <img src="assets/screenshots/dashboard.gif" alt="Dashboard Interface" width="90%">
 </div>
 
 <div align="center">
-  <img src="assets/screenshots/carbon-calculator.png" alt="Carbon Calculator" width="45%">
-  <img src="assets/screenshots/projects.png" alt="Carbon Projects" width="45%">
+  <h3>Trading Interface</h3>
+  <img src="assets/screenshots/trading.gif" alt="Trading Interface" width="90%">
+</div>
+
+<div align="center">
+  <h3>Carbon Footprint Calculator</h3>
+  <img src="assets/screenshots/calculator.gif" alt="Carbon Calculator" width="90%">
+</div>
+
+<div align="center">
+  <h3>Carbon Projects Marketplace</h3>
+  <img src="assets/screenshots/projects.gif" alt="Carbon Projects" width="90%">
 </div>
 
 ## AI Features
