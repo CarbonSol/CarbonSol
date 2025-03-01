@@ -1,0 +1,20 @@
+[package]
+name = "carbonsol_dex"
+version = "0.1.0"
+edition = "2021"
+description = "Decentralized Exchange for CarbonSol tokens on Solana"
+authors = ["CarbonSol Team"]
+
+[features]
+no-entrypoint = []
+
+[dependencies]
+solana-program = "1.14.0"
+thiserror = "1.0.30"
+spl-token = { version = "3.5.0", features = ["no-entrypoint"] }
+borsh = "0.9.3"
+cst_token = { path = "../cst_token", features = ["no-entrypoint"] }
+vcu_token = { path = "../vcu_token", features = ["no-entrypoint"] }
+
+[lib]
+crate-type = ["cdylib", "lib"] 

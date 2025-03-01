@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+ <!-- Background circle -->
+ <circle cx="250" cy="250" r="250" fill="#0a192f" />
+ <!-- Core design - Minimalist carbon ring combined with Solana symbol -->
+ <g transform="translate(250, 250)">
+ <!-- Outer ring - represents carbon cycle -->
+ <circle cx="0" cy="0" r="170" fill="none" stroke="#14F195" stroke-width="18" />
+ <!-- Solana style graphic - simplified version -->
+ <path d="M-80,-50 L80,50 M-80,50 L80,-50 M-110,0 L110,0"
+ stroke="#14F195" stroke-width="18" stroke-linecap="round" />
+ <!-- Center point - AI core -->
+ <circle cx="0" cy="0" r="40" fill="#9945FF" />
+ </g>
+</svg> 

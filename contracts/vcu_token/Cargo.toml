@@ -1,0 +1,18 @@
+[package]
+name = "vcu_token"
+version = "0.1.0"
+edition = "2021"
+description = "Verified Carbon Unit (VCU) token implementation on Solana"
+authors = ["CarbonSol Team"]
+
+[features]
+no-entrypoint = []
+
+[dependencies]
+solana-program = "1.14.0"
+thiserror = "1.0.30"
+spl-token = { version = "3.5.0", features = ["no-entrypoint"] }
+borsh = "0.9.3"
+
+[lib]
+crate-type = ["cdylib", "lib"] 

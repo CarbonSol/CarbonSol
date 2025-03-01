@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #10B981; /* Green for environmental theme */
+  --secondary-color: #3B82F6; /* Blue for technology */
+  --background-color: #F9FAFB;
+  --card-background: #FFFFFF;
+  --text-primary: #1F2937;
+  --text-secondary: #6B7280;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  color: var(--text-primary);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.btn-primary {
+  @apply bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded;
+}
+
+.btn-secondary {
+  @apply bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded;
+}
+
+.card {
+  @apply bg-white rounded-lg shadow-md p-6;
+}
+
+.input-field {
+  @apply border border-gray-300 rounded-md px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-green-500;
+}
+
+.navbar {
+  @apply bg-white shadow-md py-4 px-6 flex justify-between items-center;
+}
+
+.footer {
+  @apply bg-gray-800 text-white py-8 px-6;
+}
+
+/* Dashboard specific styles */
+.dashboard-card {
+  @apply bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300;
+}
+
+.stat-card {
+  @apply flex flex-col p-6 bg-white rounded-lg shadow-md;
+}
+
+.stat-value {
+  @apply text-3xl font-bold text-green-600;
+}
+
+.stat-label {
+  @apply text-gray-500 text-sm;
+}
+
+/* Trading view styles */
+.order-book {
+  @apply bg-white rounded-lg shadow-md p-4;
+}
+
+.order-row {
+  @apply flex justify-between py-1 border-b border-gray-100;
+}
+
+.buy-order {
+  @apply text-green-600;
+}
+
+.sell-order {
+  @apply text-red-600;
+}
+
+/* Chart container */
+.chart-container {
+  @apply bg-white rounded-lg shadow-md p-4 h-80;
+} 
