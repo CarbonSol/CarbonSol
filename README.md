@@ -1,10 +1,6 @@
 # CarbonSol AI DEX
 
-<div align="center">
-  <img src="assets/logo.svg" alt="CarbonSol Logo" width="200" height="200">
-</div>
-
-<!-- Alternative display method if the SVG above doesn't render correctly -->
+<!-- Logo with dark/light mode support -->
 <div align="center">
   <a href="https://carbonsol.io">
     <picture>
